@@ -1,0 +1,7 @@
+# https://flathub.org/apps/com.valvesoftware.Steam
+
+
+- name: Install Steam from Flathub
+  community.general.flatpak:
+    name: com.valvesoftware.Steam
+    state: present

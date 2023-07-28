@@ -1,0 +1,1 @@
+https://flatpak.org/setup/Chrome%20OS
