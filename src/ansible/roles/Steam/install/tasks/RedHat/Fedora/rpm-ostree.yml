@@ -1,0 +1,9 @@
+- name: Install
+  community.general.rpm_ostree_pkg:
+    name: "{{ item }}"
+    state: present
+  loop:
+  - virt-install
+  become: true
+  notify:
+  - Reboot

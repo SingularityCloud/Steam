@@ -1,0 +1,10 @@
+---
+- name: add RpmFusion
+  include_tasks: "from:/{{ from }}/add repo.yml"
+
+- name: Install Steam from RPMFusion
+  become: true
+  ansible.builtin.dnf:
+    name: steam
+    enablerepo: rpmfusion-nonfree-steam
+    state: present

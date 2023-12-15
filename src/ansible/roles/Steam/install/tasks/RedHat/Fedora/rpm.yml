@@ -1,0 +1,5 @@
+---
+- name: include from
+  include_tasks:
+    file: "from:/{{ from }}/main.yml"
+  when: from != "default"
