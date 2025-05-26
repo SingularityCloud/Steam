@@ -17,4 +17,4 @@ sudo pacman -Sy
 
 sudo pacman -S steam
 
-#distrobox-export --app $app
+distrobox-export --app $app
