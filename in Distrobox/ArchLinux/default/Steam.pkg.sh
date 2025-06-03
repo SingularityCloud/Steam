@@ -1,5 +1,5 @@
 app=Steam
-exe=spotify-launcher
+exe=`echo "$app" | awk '{print tolower($0)}'`
 
 distrobox create --name $app --home ~/.uni/hyper/distrobox/HOME/$app --image quay.io/toolbx/arch-toolbox:latest
 
@@ -18,5 +18,4 @@ sudo pacman -Sy
 
 sudo pacman -S steam
 
-this=`echo "$app" | awk '{print tolower($0)}'`
 distrobox-export --app $exe
