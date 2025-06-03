@@ -1,5 +1,5 @@
 app=Steam
-exe=`echo "$app" | awk '{print tolower($0)}'`
+bin=`echo "$app" | awk '{print tolower($0)}'`
 
 distrobox create --name $app --home ~/.uni/hyper/distrobox/HOME/$app --image quay.io/toolbx/arch-toolbox:latest
 
@@ -18,4 +18,4 @@ sudo pacman -Sy
 
 sudo pacman -S steam
 
-distrobox-export --app $exe
+distrobox-export --app $bin
